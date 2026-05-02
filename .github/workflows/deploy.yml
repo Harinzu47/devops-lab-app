@@ -15,9 +15,5 @@ jobs:
 
       - name: 2. Eksekusi Skrip Deployment
         run: |
-          echo "========================================="
-          echo "🚀 Menerima sinyal dari GitHub!"
-          echo "✅ Kode terbaru berhasil ditarik ke server Rocky Linux."
-          echo "📂 Isi folder aplikasi saat ini:"
-          ls -la
-          echo "========================================="
+          docker compose down
+          docker compose up -d
