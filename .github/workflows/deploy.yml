@@ -1,0 +1,23 @@
+name: Auto Deploy Lab
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-ke-server:
+    runs-on: self-hosted
+
+    steps:
+      - name: 1. Menarik Kode Terbaru
+        uses: actions/checkout@v4
+
+      - name: 2. Eksekusi Skrip Deployment
+        run: |
+          echo "========================================="
+          echo "🚀 Menerima sinyal dari GitHub!"
+          echo "✅ Kode terbaru berhasil ditarik ke server Rocky Linux."
+          echo "📂 Isi folder aplikasi saat ini:"
+          ls -la
+          echo "========================================="
